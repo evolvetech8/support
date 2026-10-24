@@ -16,16 +16,22 @@ A universal, Apple App Store–compliant static website for **Archonic** (`archo
 
 ---
 
-## 🔗 URLs for App Store Connect
+## 🔗 Live Production URLs for App Store Connect
 
-Once deployed to your hosting provider (e.g., `https://your-domain.com` or `https://<username>.github.io/support`), paste these URLs into **App Store Connect** for every app or game you upload:
+Your support portal is live on **both** GitHub Pages (`evolvetech8/support`) and Vercel (`portfolio`). Copy and paste either set of URLs directly into **App Store Connect**:
 
-- **Support URL**: `https://<your-domain>/index.html` *(or `https://<your-domain>/`)*
-- **Privacy Policy URL**: `https://<your-domain>/privacy.html`
-- **Terms of Use (EULA) URL**: `https://<your-domain>/terms.html`
+### Option 1 — Vercel Production URLs (`portfolio`)
+- **Support URL**: `https://portfolio-one-rho-87.vercel.app/support/index.html`
+- **Privacy Policy URL**: `https://portfolio-one-rho-87.vercel.app/support/privacy.html`
+- **Terms of Use (EULA) URL**: `https://portfolio-one-rho-87.vercel.app/support/terms.html`
+
+### Option 2 — Dedicated GitHub Pages URLs (`evolvetech8/support`)
+- **Support URL**: `https://evolvetech8.github.io/support/`
+- **Privacy Policy URL**: `https://evolvetech8.github.io/support/privacy.html`
+- **Terms of Use (EULA) URL**: `https://evolvetech8.github.io/support/terms.html`
 
 > **Tip — Deep-linking Language from Your iOS App:**
-> By default, the portal opens in **English** (`?lang=en`) for Apple App Store Reviewers. If your iOS app is set to Vietnamese, you can open `https://<your-domain>/index.html?lang=vi` to automatically display Vietnamese.
+> By default, the portal opens in **English** (`?lang=en`) for Apple App Store Reviewers. If your iOS app is set to Vietnamese, you can open `?lang=vi` (e.g., `https://evolvetech8.github.io/support/?lang=vi`) to automatically display Vietnamese.
 
 ---
 
