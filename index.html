@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archonic Support Center — Official iOS App &amp; Game Support</title>
+  <meta
+    name="description"
+    content="Official customer support, troubleshooting, billing help, FAQ, and data privacy requests for all iOS and iPadOS apps and games published by Archonic."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Archonic Support Home">
+        <span class="brand-mark">A</span>
+        <span class="brand-text-wrap">
+          <span>Archonic</span>
+          <span class="brand-subtitle" data-en="iOS App &amp; Game Studio" data-vi="Studio Ứng Dụng &amp; Game iOS">iOS App &amp; Game Studio</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active" data-en="Support Center" data-vi="Trung Tâm Hỗ Trợ">Support Center</a>
+        <a href="privacy.html" class="nav-link" data-en="Privacy Policy" data-vi="Chính Sách Bảo Mật">Privacy Policy</a>
+        <a href="terms.html" class="nav-link" data-en="Terms of Use" data-vi="Điều Khoản Sử Dụng">Terms of Use</a>
+      </nav>
+
+      <div class="header-controls">
+        <div class="lang-switch" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-set-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-set-lang="vi" aria-pressed="false">VI</button>
+        </div>
+        <button type="button" id="theme-toggle-btn" class="theme-btn" aria-label="Toggle Light/Dark Mode">
+          <span aria-hidden="true">☀️</span> <span>Light Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="status-pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span data-en="All App &amp; Game Services Operational" data-vi="Tất cả Dịch vụ Ứng dụng &amp; Trò chơi Hoạt động Ổn định">All App &amp; Game Services Operational</span>
+        </div>
+
+        <h1 class="lang-en">
+          How can <span class="gradient-text">Archonic Support</span> help you today?
+        </h1>
+        <h1 class="lang-vi">
+          <span class="gradient-text">Archonic Support</span> có thể giúp gì cho bạn hôm nay?
+        </h1>
+
+        <p class="hero-subtitle lang-en">
+          Welcome to the official support portal for all iOS &amp; iPadOS applications, utilities, and games published by <strong>Archonic</strong> on the Apple App Store. Browse instant troubleshooting guides or contact our team directly.
+        </p>
+        <p class="hero-subtitle lang-vi">
+          Chào mừng bạn đến với cổng hỗ trợ chính thức cho toàn bộ ứng dụng, tiện ích và trò chơi trên iOS &amp; iPadOS được phát hành bởi <strong>Archonic</strong> trên Apple App Store. Tra cứu hướng dẫn xử lý nhanh hoặc gửi yêu cầu hỗ trợ trực tiếp cho đội ngũ của chúng tôi.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact-support" class="btn btn-primary">
+            <span aria-hidden="true">✉️</span>
+            <span data-en="Submit a Support Request" data-vi="Gửi Yêu Cầu Hỗ Trợ">Submit a Support Request</span>
+          </a>
+          <a href="mailto:archonic88@gmail.com" class="btn btn-secondary">
+            <span aria-hidden="true">⚡</span>
+            <span>archonic88@gmail.com</span>
+          </a>
+        </div>
+
+        <!-- Studio Trust Bar -->
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon" aria-hidden="true">📬</div>
+            <div>
+              <div class="trust-label" data-en="Official Support Email" data-vi="Email Hỗ Trợ Chính Thức">Official Support Email</div>
+              <div class="trust-value">archonic88@gmail.com</div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon" aria-hidden="true">⏱️</div>
+            <div>
+              <div class="trust-label" data-en="Response Time SLA" data-vi="Thời Gian Phản Hồi">Response Time SLA</div>
+              <div class="trust-value" data-en="Within 24 – 48 Hours" data-vi="Trong vòng 24 – 48 Giờ">Within 24 – 48 Hours</div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon" aria-hidden="true">🎮</div>
+            <div>
+              <div class="trust-label" data-en="Supported Platforms" data-vi="Nền Tảng Hỗ Trợ">Supported Platforms</div>
+              <div class="trust-value" data-en="iOS, iPadOS &amp; Game Center" data-vi="iOS, iPadOS &amp; Game Center">iOS, iPadOS &amp; Game Center</div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon" aria-hidden="true">🛡️</div>
+            <div>
+              <div class="trust-label" data-en="Privacy &amp; Compliance" data-vi="Bảo Mật &amp; Tuân Thủ">Privacy &amp; Compliance</div>
+              <div class="trust-value" data-en="App Store Verified" data-vi="Chuẩn Apple App Store">App Store Verified</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Self-Service Troubleshooting Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-en="Quick Self-Service Guides" data-vi="Hướng Dẫn Tự Xử Lý Nhanh">Quick Self-Service Guides</span>
+          <h2 class="section-title" data-en="Instant Solutions for Common iOS Topics" data-vi="Giải Pháp Nhanh Cho Các Vấn Đề Thường Gặp">Instant Solutions for Common iOS Topics</h2>
+          <p class="section-desc" data-en="Most questions regarding purchases, subscriptions, gameplay, or permissions can be resolved in under a minute using these steps." data-vi="Hầu hết các thắc mắc về giao dịch mua hàng, gói đăng ký, trò chơi hoặc quyền thiết bị đều có thể được giải quyết nhanh chóng qua các bước dưới đây.">
+            Most questions regarding purchases, subscriptions, gameplay, or permissions can be resolved in under a minute using these steps.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Card 1: Restore Purchases -->
+          <article class="feature-card">
+            <div class="card-icon" aria-hidden="true">🔄</div>
+            <h3 data-en="Restore In-App Purchases" data-vi="Khôi Phục Giao Dịch Đã Mua">Restore In-App Purchases</h3>
+            <p class="lang-en">Reinstalled an app or switched to a new iPhone or iPad? Restore your previously unlocked premium features or non-consumable items at no extra charge.</p>
+            <p class="lang-vi">Bạn vừa cài lại ứng dụng hoặc đổi sang iPhone/iPad mới? Khôi phục ngay các tính năng cao cấp hoặc vật phẩm vĩnh viễn đã mua hoàn toàn miễn phí.</p>
+            <ul class="card-steps lang-en">
+              <li>Sign in with the same Apple ID used for the original purchase.</li>
+              <li>Open the app/game Settings or Store screen.</li>
+              <li>Tap <strong>"Restore Purchases"</strong> and wait for confirmation.</li>
+            </ul>
+            <ul class="card-steps lang-vi">
+              <li>Đăng nhập đúng Apple ID đã dùng khi mua ban đầu.</li>
+              <li>Mở mục Cài đặt (Settings) hoặc Cửa hàng trong ứng dụng/game.</li>
+              <li>Nhấn <strong>"Khôi phục giao dịch mua" (Restore Purchases)</strong>.</li>
+            </ul>
+          </article>
+
+          <!-- Card 2: Manage Subscriptions -->
+          <article class="feature-card">
+            <div class="card-icon" aria-hidden="true">💳</div>
+            <h3 data-en="Manage or Cancel Subscriptions" data-vi="Quản Lý &amp; Hủy Gói Đăng Ký">Manage or Cancel Subscriptions</h3>
+            <p class="lang-en">All trials and auto-renewing subscriptions are billed and managed directly through your Apple ID account for maximum security.</p>
+            <p class="lang-vi">Mọi gói dùng thử và đăng ký gia hạn tự động đều được quản lý bảo mật trực tiếp thông qua tài khoản Apple ID của bạn.</p>
+            <ul class="card-steps lang-en">
+              <li>Open the <strong>Settings</strong> app on your iPhone or iPad.</li>
+              <li>Tap your <strong>Apple ID Name</strong> at the top, then tap <strong>Subscriptions</strong>.</li>
+              <li>Select the app to modify plans or cancel renewal anytime.</li>
+            </ul>
+            <ul class="card-steps lang-vi">
+              <li>Mở ứng dụng <strong>Cài đặt (Settings)</strong> trên iPhone/iPad.</li>
+              <li>Chạm vào <strong>Tên Apple ID</strong> của bạn &rarr; chọn <strong>Đăng ký (Subscriptions)</strong>.</li>
+              <li>Chọn ứng dụng cần thay đổi gói hoặc hủy gia hạn bất cứ lúc nào.</li>
+            </ul>
+          </article>
+
+          <!-- Card 3: Performance, Crashes & Audio -->
+          <article class="feature-card">
+            <div class="card-icon" aria-hidden="true">🚀</div>
+            <h3 data-en="Game Audio, Lag &amp; Crash Fixes" data-vi="Khắc Phục Âm Thanh, Giật Lag &amp; Văng App">Game Audio, Lag &amp; Crash Fixes</h3>
+            <p class="lang-en">If an app or game behaves unexpectedly, has no sound, or closes on launch, perform these quick iOS health checks.</p>
+            <p class="lang-vi">Nếu ứng dụng hoặc trò chơi bị mất tiếng, chậm hoặc tự đóng khi mở, hãy kiểm tra nhanh các bước sau trên iOS.</p>
+            <ul class="card-steps lang-en">
+              <li>Check the physical <strong>Silent / Ring switch</strong> or Control Center mute state for game audio.</li>
+              <li>Update the app to the latest version on the <strong>App Store</strong>.</li>
+              <li>Ensure at least 1 GB of free device storage and restart iOS.</li>
+            </ul>
+            <ul class="card-steps lang-vi">
+              <li>Kiểm tra nút gạt <strong>Im lặng (Silent Mode)</strong> bên cạnh máy nếu game không có tiếng.</li>
+              <li>Cập nhật phiên bản mới nhất của ứng dụng trên <strong>App Store</strong>.</li>
+              <li>Đảm bảo máy còn trống tối thiểu 1 GB bộ nhớ và khởi động lại thiết bị.</li>
+            </ul>
+          </article>
+
+          <!-- Card 4: Data & Permissions -->
+          <article class="feature-card">
+            <div class="card-icon" aria-hidden="true">🔒</div>
+            <h3 data-en="Permissions &amp; Data Deletion" data-vi="Quyền Thiết Bị &amp; Xóa Dữ Liệu">Permissions &amp; Data Deletion</h3>
+            <p class="lang-en">Control camera, photo, or notification permissions anytime, or request complete deletion of your app/game data.</p>
+            <p class="lang-vi">Toàn quyền bật/tắt quyền truy cập ảnh, máy ảnh, thông báo hoặc yêu cầu xóa toàn bộ dữ liệu cá nhân của bạn.</p>
+            <ul class="card-steps lang-en">
+              <li>Go to <strong>iOS Settings &rarr; Apps &rarr; [App Name]</strong> to toggle permissions.</li>
+              <li>Uninstall local-only apps to immediately wipe all sandbox data.</li>
+              <li>Use our <a href="#contact-support">Support Form</a> for account/cloud data deletion.</li>
+            </ul>
+            <ul class="card-steps lang-vi">
+              <li>Vào <strong>Cài đặt iOS &rarr; Ứng dụng &rarr; [Tên App]</strong> để bật/tắt quyền.</li>
+              <li>Gỡ cài đặt ứng dụng offline để xóa sạch dữ liệu lưu cục bộ.</li>
+              <li>Sử dụng <a href="#contact-support">Biểu mẫu Hỗ trợ</a> nếu cần xóa dữ liệu tài khoản.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-en="Knowledge Base" data-vi="Câu Hỏi Thường Gặp">Knowledge Base</span>
+          <h2 class="section-title" data-en="Frequently Asked Questions (FAQ)" data-vi="Giải Đáp Thắc Mắc Thường Gặp (FAQ)">Frequently Asked Questions (FAQ)</h2>
+          <p class="section-desc" data-en="Filter by topic or search keywords to find detailed answers for Archonic apps and games." data-vi="Lọc theo danh mục hoặc nhập từ khóa để tìm câu trả lời chi tiết cho các ứng dụng và trò chơi của Archonic.">
+            Filter by topic or search keywords to find detailed answers for Archonic apps and games.
+          </p>
+        </div>
+
+        <div class="faq-toolbar">
+          <div class="search-box">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input
+              type="search"
+              id="faq-search-input"
+              class="search-input"
+              placeholder="Search FAQs (e.g., restore, subscription, sound, delete)..."
+              data-placeholder-en="Search FAQs (e.g., restore, subscription, sound, delete)..."
+              data-placeholder-vi="Tìm câu hỏi (VD: khôi phục, đăng ký, âm thanh, xóa dữ liệu)..."
+              aria-label="Search FAQs"
+            />
+          </div>
+
+          <div class="filter-pills" role="group" aria-label="FAQ Category Filter">
+            <button type="button" class="filter-pill active" data-filter="all" data-en="All Topics" data-vi="Tất Cả">All Topics</button>
+            <button type="button" class="filter-pill" data-filter="billing" data-en="Billing &amp; Purchases" data-vi="Thanh Toán &amp; Mua Hàng">Billing &amp; Purchases</button>
+            <button type="button" class="filter-pill" data-filter="general" data-en="Apps &amp; Gameplay" data-vi="Ứng Dụng &amp; Trò Chơi">Apps &amp; Gameplay</button>
+            <button type="button" class="filter-pill" data-filter="troubleshooting" data-en="Troubleshooting" data-vi="Khắc Phục Sự Cố">Troubleshooting</button>
+            <button type="button" class="filter-pill" data-filter="privacy" data-en="Privacy &amp; Data" data-vi="Bảo Mật &amp; Dữ Liệu">Privacy &amp; Data</button>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <details class="faq-item" data-category="billing" open>
+            <summary>
+              <span class="faq-question-wrap">
+                <span class="faq-badge" data-en="Billing" data-vi="Thanh Toán">Billing</span>
+                <span data-en="How do I restore my previous In-App Purchases on a new iPhone or iPad?" data-vi="Làm thế nào để khôi phục các giao dịch mua (In-App Purchase) trên iPhone hoặc iPad mới?">How do I restore my previous In-App Purchases on a new iPhone or iPad?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <div class="lang-en">
+                <p>If you previously purchased a lifetime unlock, non-consumable upgrade, or active subscription in any Archonic app or game, you can restore it for free:</p>
+                <ol>
+                  <li>Make sure your device is signed in to the <strong>exact same Apple ID</strong> that made the original purchase.</li>
+                  <li>Open the app or game and navigate to the <strong>Settings</strong>, <strong>Shop</strong>, or <strong>Premium</strong> screen.</li>
+                  <li>Tap the <strong>"Restore Purchases"</strong> button. Apple StoreKit will verify your purchase history and unlock your content immediately.</li>
+                </ol>
+                <p><em>Note: Consumable in-game items (such as one-time coin packs, hints, or boosters that get used up during gameplay) cannot be restored across devices unless synced via a cloud profile.</em></p>
+              </div>
+              <div class="lang-vi">
+                <p>Nếu bạn đã mua gói mở khóa vĩnh viễn, vật phẩm không tiêu hao hoặc gói đăng ký còn hạn trong ứng dụng/trò chơi của Archonic, bạn có thể khôi phục hoàn toàn miễn phí:</p>
+                <ol>
+                  <li>Đảm bảo thiết bị đang đăng nhập <strong>đúng tài khoản Apple ID</strong> đã thực hiện giao dịch mua ban đầu.</li>
+                  <li>Mở ứng dụng hoặc trò chơi, truy cập mục <strong>Cài đặt (Settings)</strong>, <strong>Cửa hàng (Shop)</strong> hoặc màn hình <strong>Nâng cấp (Premium)</strong>.</li>
+                  <li>Nhấn nút <strong>"Restore Purchases" (Khôi phục giao dịch mua)</strong>. Hệ thống Apple StoreKit sẽ xác thực lịch sử và kích hoạt lại quyền lợi ngay lập tức.</li>
+                </ol>
+                <p><em>Lưu ý: Các vật phẩm tiêu hao dùng một lần trong game (như gói xu, lượt gợi ý, vật phẩm tăng tốc đã sử dụng) không thuộc diện khôi phục qua StoreKit.</em></p>
+              </div>
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="faq-item" data-category="billing">
+            <summary>
+              <span class="faq-question-wrap">
+                <span class="faq-badge" data-en="Billing" data-vi="Thanh Toán">Billing</span>
+                <span data-en="How do I manage or cancel an auto-renewing App Store subscription?" data-vi="Làm cách nào để quản lý hoặc hủy gói đăng ký tự động gia hạn trên App Store?">How do I manage or cancel an auto-renewing App Store subscription?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <div class="lang-en">
+                <p>Deleting an app from your home screen does <strong>not</strong> automatically cancel an active subscription. Because Apple handles all billing, you can view or cancel your subscription directly in iOS:</p>
+                <ol>
+                  <li>Open the <strong>Settings</strong> app on your iPhone or iPad.</li>
+                  <li>Tap your <strong>Name (Apple ID)</strong> at the top of the screen.</li>
+                  <li>Tap <strong>Subscriptions</strong> and select the Archonic app.</li>
+                  <li>Tap <strong>Cancel Subscription</strong> (or choose a different billing cycle). To avoid being charged for the next cycle, cancel at least <strong>24 hours before</strong> the current trial or billing period ends.</li>
+                </ol>
+              </div>
+              <div class="lang-vi">
+                <p>Việc xóa ứng dụng khỏi màn hình chính <strong>không</strong> tự động hủy gói đăng ký đang hoạt động. Vì Apple quản lý toàn bộ thanh toán, bạn có thể kiểm tra hoặc hủy bất cứ lúc nào ngay trong Cài đặt iOS:</p>
+                <ol>
+                  <li>Mở ứng dụng <strong>Cài đặt (Settings)</strong> trên iPhone hoặc iPad.</li>
+                  <li>Nhấn vào <strong>Tên tài khoản Apple ID</strong> của bạn ở đầu màn hình.</li>
+                  <li>Chọn <strong>Đăng ký (Subscriptions)</strong> và chọn ứng dụng của Archonic.</li>
+                  <li>Nhấn <strong>Hủy đăng ký (Cancel Subscription)</strong>. Để tránh bị tính phí cho chu kỳ tiếp theo, vui lòng hủy ít nhất <strong>24 giờ trước khi</strong> kỳ hạn hiện tại hoặc kỳ dùng thử kết thúc.</li>
+                </ol>
+              </div>
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="faq-item" data-category="billing">
+            <summary>
+              <span class="faq-question-wrap">
+                <span class="faq-badge" data-en="Billing" data-vi="Thanh Toán">Billing</span>
+                <span data-en="How do I request a refund for an App Store purchase?" data-vi="Làm thế nào để yêu cầu hoàn tiền (Refund) cho giao dịch trên App Store?">How do I request a refund for an App Store purchase?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <div class="lang-en">
+                <p>All payments on the iOS App Store are processed directly by Apple, and developers do not have direct access to your payment card or Apple's refund tool. To request a refund from Apple:</p>
+                <ol>
+                  <li>Visit Apple's official refund portal at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">reportaproblem.apple.com</a>.</li>
+                  <li>Sign in with your Apple ID and select <strong>"Request a refund"</strong>.</li>
+                  <li>Choose the reason and select the purchase or subscription you wish to refund.</li>
+                </ol>
+              </div>
+              <div class="lang-vi">
+                <p>Mọi giao dịch trên App Store đều do Apple trực tiếp xử lý, nhà phát triển không có quyền truy cập vào thẻ thanh toán hay hệ thống hoàn tiền của Apple. Để gửi yêu cầu hoàn tiền:</p>
+                <ol>
+                  <li>Truy cập cổng hỗ trợ chính thức của Apple tại <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">reportaproblem.apple.com</a>.</li>
+                  <li>Đăng nhập Apple ID và chọn <strong>"Yêu cầu hoàn tiền" (Request a refund)</strong>.</li>
+                  <li>Chọn lý do và đánh dấu giao dịch mua bạn muốn được hoàn tiền.</li>
+                </ol>
+              </div>
+            </div>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details class="faq-item" data-category="troubleshooting">
+            <summary>
+              <span class="faq-question-wrap">
+                <span class="faq-badge" data-en="Troubleshooting" data-vi="Sự Cố">Troubleshooting</span>
+                <span data-en="Why is there no sound or music in my Archonic game or app?" data-vi="Tại sao trò chơi hoặc ứng dụng không phát âm thanh hay nhạc nền?">Why is there no sound or music in my Archonic game or app?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <div class="lang-en">
+                <p>On iOS and iPadOS, most games respect the device's Silent Mode so they don't play unexpected audio in quiet environments. Please check:</p>
+                <ul>
+                  <li><strong>Silent Mode Switch / Action Button:</strong> Disable Silent Mode on the side of your iPhone or in Control Center.</li>
+                  <li><strong>In-App Audio Settings:</strong> Open the game's pause menu or settings screen and verify that <em>Sound Effects (SFX)</em> and <em>Music</em> are enabled.</li>
+                  <li><strong>Bluetooth Routing:</strong> Check if your device is connected to wireless earbuds or another Bluetooth speaker nearby.</li>
+                </ul>
+              </div>
+              <div class="lang-vi">
+                <p>Trên iOS và iPadOS, hầu hết các trò chơi đều tuân theo chế độ Im lặng (Silent Mode) của thiết bị để tránh phát tiếng ồn ngoài ý muốn. Bạn hãy kiểm tra:</p>
+                <ul>
+                  <li><strong>Công tắc Im lặng / Nút Tác vụ (Action Button):</strong> Tắt chế độ Im lặng ở cạnh bên iPhone hoặc trong Trung tâm điều khiển (Control Center).</li>
+                  <li><strong>Cài đặt âm thanh trong game:</strong> Mở menu Tạm dừng hoặc Cài đặt trong game để chắc chắn mục <em>Hiệu ứng âm thanh (SFX)</em> và <em>Nhạc nền (Music)</em> đang bật.</li>
+                  <li><strong>Kết nối Bluetooth:</strong> Kiểm tra xem máy có đang kết nối với tai nghe không dây hoặc loa Bluetooth nào gần đó không.</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <!-- FAQ 5 -->
+          <details class="faq-item" data-category="troubleshooting">
+            <summary>
+              <span class="faq-question-wrap">
+                <span class="faq-badge" data-en="Troubleshooting" data-vi="Sự Cố">Troubleshooting</span>
+                <span data-en="What should I do if an app or game freezes, lags, or closes unexpectedly?" data-vi="Tôi nên làm gì nếu ứng dụng hoặc trò chơi bị đơ, giật lag hoặc tự thoát?">What should I do if an app or game freezes, lags, or closes unexpectedly?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <div class="lang-en">
+                <p>Please try these steps in order:</p>
+                <ol>
+                  <li><strong>Check for App Store Updates:</strong> Open the App Store, tap your profile icon, and update the app to the latest release.</li>
+                  <li><strong>Force Close &amp; Reopen:</strong> Swipe up from the bottom of your screen to open the App Switcher, swipe the app card up to close it, and launch it again.</li>
+                  <li><strong>Update iOS &amp; Free Storage:</strong> Ensure your device runs a supported iOS version and has at least 1 GB of available storage.</li>
+                  <li><strong>Report the Issue:</strong> If the issue persists, send us a report below with your device model and iOS version so our engineers can reproduce and patch it quickly.</li>
+                </ol>
+              </div>
+              <div class="lang-vi">
+                <p>Bạn vui lòng thử lần lượt các bước sau:</p>
+                <ol>
+                  <li><strong>Cập nhật phiên bản mới:</strong> Mở App Store, chạm vào biểu tượng hồ sơ và cập nhật ứng dụng lên bản mới nhất.</li>
+                  <li><strong>Đóng hoàn toàn và mở lại:</strong> Vuốt từ cạnh dưới màn hình lên để mở trình đa nhiệm, vuốt thẻ ứng dụng lên để đóng hoàn toàn rồi mở lại.</li>
+                  <li><strong>Kiểm tra dung lượng &amp; iOS:</strong> Đảm bảo thiết bị còn trống ít nhất 1 GB bộ nhớ và đang chạy phiên bản iOS tương thích.</li>
+                  <li><strong>Gửi báo lỗi cho chúng tôi:</strong> Nếu sự cố vẫn tiếp diễn, hãy gửi thông tin dòng máy và phiên bản iOS qua biểu mẫu bên dưới để đội ngũ kỹ thuật khắc phục sớm nhất.</li>
+                </ol>
+              </div>
+            </div>
+          </details>
+
+          <!-- FAQ 6 -->
+          <details class="faq-item" data-category="general">
+            <summary>
+              <span class="faq-question-wrap">
+                <span class="faq-badge" data-en="Games" data-vi="Trò Chơi">Games</span>
+                <span data-en="How do Game Center leaderboards, achievements, and cloud saves work?" data-vi="Bảng xếp hạng Game Center, thành tựu và lưu trữ đám mây hoạt động như thế nào?">How do Game Center leaderboards, achievements, and cloud saves work?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <div class="lang-en">
+                <p>For Archonic games that integrate with Apple <strong>Game Center</strong> or <strong>iCloud</strong>:</p>
+                <ul>
+                  <li>Open <strong>iOS Settings &rarr; Game Center</strong> and ensure you are signed in with your Apple Account.</li>
+                  <li>High scores and unlocked achievements automatically sync when your device has an active internet connection.</li>
+                  <li>If you play offline, your scores are saved locally and uploaded to Game Center the next time you go online.</li>
+                </ul>
+              </div>
+              <div class="lang-vi">
+                <p>Đối với các trò chơi của Archonic có tích hợp <strong>Apple Game Center</strong> hoặc <strong>iCloud</strong>:</p>
+                <ul>
+                  <li>Mở <strong>Cài đặt iOS &rarr; Game Center</strong> và đảm bảo bạn đã đăng nhập tài khoản Apple.</li>
+                  <li>Điểm số cao và thành tựu mở khóa sẽ tự động đồng bộ khi thiết bị có kết nối mạng.</li>
+                  <li>Nếu bạn chơi khi ngoại tuyến (offline), điểm số sẽ được lưu trên máy và tự động cập nhật lên Game Center khi có mạng trở lại.</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <!-- FAQ 7 -->
+          <details class="faq-item" data-category="privacy">
+            <summary>
+              <span class="faq-question-wrap">
+                <span class="faq-badge" data-en="Privacy &amp; Data" data-vi="Bảo Mật">Privacy &amp; Data</span>
+                <span data-en="Where is my data stored, and what happens if I uninstall an offline app?" data-vi="Dữ liệu của tôi được lưu ở đâu, và điều gì xảy ra nếu tôi gỡ cài đặt ứng dụng offline?">Where is my data stored, and what happens if I uninstall an offline app?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <div class="lang-en">
+                <p>Many Archonic utility, lifestyle, and assessment apps are built with a <strong>100% Local-First / Offline-First architecture</strong> for maximum privacy:</p>
+                <ul>
+                  <li>Your personal entries, checklists, assessment results, and preferences are stored locally inside the secure iOS application sandbox on your device.</li>
+                  <li>We do not upload or sell your private entries to external servers.</li>
+                  <li>Because data is stored locally on your device, <strong>uninstalling the app will permanently delete all local app data</strong> unless backed up via iOS system backup or iCloud.</li>
+                </ul>
+              </div>
+              <div class="lang-vi">
+                <p>Nhiều ứng dụng tiện ích, đời sống và đánh giá của Archonic được xây dựng theo kiến trúc <strong>100% Lưu trữ Cục bộ (Offline-First)</strong> nhằm bảo vệ tối đa quyền riêng tư:</p>
+                <ul>
+                  <li>Toàn bộ ghi chú, danh sách, kết quả đánh giá và tùy chỉnh của bạn được lưu trực tiếp trong vùng nhớ bảo mật (sandbox) của iOS ngay trên thiết bị.</li>
+                  <li>Chúng tôi không tải lên hay bán dữ liệu cá nhân của bạn cho bất kỳ máy chủ bên ngoài nào.</li>
+                  <li>Vì dữ liệu nằm cục bộ trên máy, <strong>việc gỡ cài đặt ứng dụng sẽ xóa vĩnh viễn toàn bộ dữ liệu trong ứng dụng</strong> (trừ khi bạn đã sao lưu qua iCloud của hệ thống iOS).</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <!-- FAQ 8 -->
+          <details class="faq-item" data-category="privacy">
+            <summary>
+              <span class="faq-question-wrap">
+                <span class="faq-badge" data-en="Privacy &amp; Data" data-vi="Bảo Mật">Privacy &amp; Data</span>
+                <span data-en="How do I request deletion of my account or personal data?" data-vi="Làm thế nào để yêu cầu xóa tài khoản hoặc dữ liệu cá nhân của tôi?">How do I request deletion of my account or personal data?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <div class="lang-en">
+                <p>In full compliance with Apple App Store Review Guideline 5.1.1(v) and international privacy laws (GDPR / CCPA):</p>
+                <ul>
+                  <li><strong>For Offline-First Apps:</strong> Simply use the in-app <em>Reset / Clear Data</em> button in Settings, or delete the app from your device to immediately erase all data.</li>
+                  <li><strong>For Apps with Accounts or Cloud Storage:</strong> You can initiate immediate account deletion directly inside the app's <em>Account / Profile Settings &rarr; Delete Account</em> menu, OR submit an <strong>"Account / Data Deletion Request"</strong> using our <a href="#contact-support">Support Form below</a> (or email <a href="mailto:archonic88@gmail.com">archonic88@gmail.com</a>). All verified deletion requests are completed within 7 business days.</li>
+                </ul>
+              </div>
+              <div class="lang-vi">
+                <p>Tuân thủ đầy đủ quy định 5.1.1(v) của Apple App Store và các quy định bảo vệ dữ liệu quốc tế:</p>
+                <ul>
+                  <li><strong>Đối với ứng dụng Offline:</strong> Bạn chỉ cần chọn nút <em>Đặt lại / Xóa dữ liệu</em> ngay trong ứng dụng, hoặc gỡ cài đặt ứng dụng khỏi thiết bị để xóa sạch dữ liệu ngay lập tức.</li>
+                  <li><strong>Đối với ứng dụng có Tài khoản / Đám mây:</strong> Bạn có thể xóa tài khoản trực tiếp tại mục <em>Cài đặt Tài khoản &rarr; Xóa tài khoản (Delete Account)</em> trong ứng dụng, HOẶC gửi yêu cầu <strong>"Xóa Tài khoản / Dữ liệu"</strong> qua <a href="#contact-support">Biểu mẫu Hỗ trợ bên dưới</a> (hoặc gửi email tới <a href="mailto:archonic88@gmail.com">archonic88@gmail.com</a>). Mọi yêu cầu sẽ được xử lý hoàn tất trong vòng tối đa 7 ngày làm việc.</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <!-- FAQ 9 -->
+          <details class="faq-item" data-category="privacy">
+            <summary>
+              <span class="faq-question-wrap">
+                <span class="faq-badge" data-en="Permissions" data-vi="Quyền Truy Cập">Permissions</span>
+                <span data-en="Why does an app ask for Photo Library, Camera, Microphone, or Notification permissions?" data-vi="Tại sao ứng dụng yêu cầu quyền truy cập Thư viện Ảnh, Máy ảnh, Micro hoặc Thông báo?">Why does an app ask for Photo Library, Camera, Microphone, or Notification permissions?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <div class="lang-en">
+                <p>Archonic apps request iOS permissions strictly when required for a user-initiated feature:</p>
+                <ul>
+                  <li><strong>Photo Library (Add / Read):</strong> Used only when you choose to save generated cards, screenshots, or export images to your Photos app.</li>
+                  <li><strong>Notifications:</strong> Used to deliver helpful local reminders or schedule alerts that you explicitly enable.</li>
+                  <li><strong>Camera / Microphone:</strong> Used only in apps featuring AR, scanning, or voice interaction.</li>
+                </ul>
+                <p>You can revoke or change any permission at any time in <strong>iOS Settings &rarr; Apps &rarr; [App Name]</strong>.</p>
+              </div>
+              <div class="lang-vi">
+                <p>Các ứng dụng của Archonic chỉ yêu cầu quyền truy cập iOS khi thực sự cần thiết cho tính năng mà bạn chủ động sử dụng:</p>
+                <ul>
+                  <li><strong>Thư viện Ảnh (Photos):</strong> Chỉ dùng khi bạn nhấn lưu thẻ kết quả, ảnh chụp hoặc xuất hình ảnh về máy.</li>
+                  <li><strong>Thông báo (Notifications):</strong> Chỉ dùng để gửi lời nhắc cục bộ trên thiết bị theo lịch bạn đã bật.</li>
+                  <li><strong>Máy ảnh / Micro:</strong> Chỉ dùng trong các ứng dụng có tính năng quét mã, AR hoặc tương tác giọng nói.</li>
+                </ul>
+                <p>Bạn có thể bật hoặc tắt bất kỳ quyền nào mọi lúc trong <strong>Cài đặt iOS &rarr; Ứng dụng &rarr; [Tên Ứng dụng]</strong>.</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- FAQ 10 -->
+          <details class="faq-item" data-category="general">
+            <summary>
+              <span class="faq-question-wrap">
+                <span class="faq-badge" data-en="Feedback" data-vi="Góp Ý">Feedback</span>
+                <span data-en="How can I report a bug, translation issue, or suggest a new feature?" data-vi="Làm sao để báo lỗi, góp ý bản dịch hoặc đề xuất tính năng mới?">How can I report a bug, translation issue, or suggest a new feature?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <div class="lang-en">
+                <p>We love hearing from our players and users! Use the <a href="#contact-support">Support Request Form</a> below and select <strong>"Feature Request / Feedback"</strong> or <strong>"Bug / Crash Report"</strong>. Every message goes directly to the Archonic development team.</p>
+              </div>
+              <div class="lang-vi">
+                <p>Chúng tôi luôn trân trọng mọi ý kiến đóng góp từ người dùng! Bạn hãy điền <a href="#contact-support">Biểu mẫu Hỗ trợ</a> bên dưới và chọn mục <strong>"Đề xuất tính năng / Góp ý"</strong> hoặc <strong>"Báo lỗi kỹ thuật"</strong>. Mọi tin nhắn đều được gửi trực tiếp tới đội ngũ phát triển Archonic.</p>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div id="faq-empty-state" class="faq-empty">
+          <p data-en="No matching FAQ found. Try another keyword or submit a support request below!" data-vi="Không tìm thấy câu hỏi phù hợp. Hãy thử từ khóa khác hoặc gửi yêu cầu hỗ trợ bên dưới!">
+            No matching FAQ found. Try another keyword or submit a support request below!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Support & Ticket Generator Section -->
+    <section class="section" id="contact-support">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-en="Direct Assistance" data-vi="Hỗ Trợ Trực Tiếp">Direct Assistance</span>
+          <h2 class="section-title" data-en="Contact Archonic Support" data-vi="Liên Hệ Đội Ngũ Hỗ Trợ Archonic">Contact Archonic Support</h2>
+          <p class="section-desc" data-en="Need personalized help with an Archonic app or game? Fill out the support ticket form or email us directly." data-vi="Cần hỗ trợ riêng cho ứng dụng hoặc trò chơi của Archonic? Hãy điền phiếu hỗ trợ bên dưới hoặc gửi email trực tiếp cho chúng tôi.">
+            Need personalized help with an Archonic app or game? Fill out the support ticket form or email us directly.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Left Info Card -->
+          <aside class="contact-info-card">
+            <h3 data-en="Support Channels &amp; SLA" data-vi="Kênh Liên Hệ &amp; Cam Kết Hỗ Trợ">Support Channels &amp; SLA</h3>
+            <p class="lang-en" style="color: var(--text-secondary); font-size: 0.92rem; margin-top: 6px;">
+              Our engineering and support team reviews every ticket personally. Please include the name of the app or game so we can assist you faster.
+            </p>
+            <p class="lang-vi" style="color: var(--text-secondary); font-size: 0.92rem; margin-top: 6px;">
+              Đội ngũ kỹ thuật của chúng tôi trực tiếp tiếp nhận và phản hồi từng yêu cầu. Vui lòng ghi rõ tên ứng dụng hoặc trò chơi để được hỗ trợ nhanh nhất.
+            </p>
+
+            <div class="contact-info-list">
+              <div class="contact-method">
+                <div class="contact-method-icon" aria-hidden="true">📧</div>
+                <div>
+                  <h4 data-en="Direct Support Email" data-vi="Email Hỗ Trợ Trực Tiếp">Direct Support Email</h4>
+                  <p><a href="mailto:archonic88@gmail.com"><strong>archonic88@gmail.com</strong></a></p>
+                  <div class="email-copy-row">
+                    <button type="button" class="copy-mini-btn" data-copy-email data-en="Copy Email Address" data-vi="Sao chép Email">Copy Email Address</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-method-icon" aria-hidden="true">⚡</div>
+                <div>
+                  <h4 data-en="Response Time" data-vi="Thời Gian Phản Hồi">Response Time</h4>
+                  <p data-en="Monday – Sunday: Within 24 to 48 hours (often much faster)." data-vi="Thứ Hai – Chủ Nhật: Phản hồi trong vòng 24 đến 48 giờ.">Monday – Sunday: Within 24 to 48 hours (often much faster).</p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-method-icon" aria-hidden="true">📋</div>
+                <div>
+                  <h4 data-en="Helpful Details to Include" data-vi="Thông Tin Nên Đính Kèm">Helpful Details to Include</h4>
+                  <p data-en="• App or Game Name &amp; Version&#10;• iPhone / iPad Model &amp; iOS Version&#10;• Steps to reproduce the issue" data-vi="• Tên Ứng dụng hoặc Trò chơi&#10;• Dòng máy iPhone / iPad &amp; Phiên bản iOS&#10;• Mô tả chi tiết vấn đề gặp phải">
+                    • App or Game Name • iPhone / iPad Model &amp; iOS Version • Description of what happened
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-method-icon" aria-hidden="true">⚖️</div>
+                <div>
+                  <h4 data-en="Legal &amp; App Store Policies" data-vi="Chính Sách &amp; Điều Khoản">Legal &amp; App Store Policies</h4>
+                  <p>
+                    <a href="privacy.html" data-en="Privacy Policy" data-vi="Chính Sách Bảo Mật">Privacy Policy</a> &bull;
+                    <a href="terms.html" data-en="Terms of Use (EULA)" data-vi="Điều Khoản Sử Dụng (EULA)">Terms of Use (EULA)</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Right Interactive Form Card -->
+          <div class="contact-form-card">
+            <h3 data-en="Submit a Support Ticket" data-vi="Tạo Phiếu Yêu Cầu Hỗ Trợ" style="margin-bottom: 16px;">Submit a Support Ticket</h3>
+
+            <form id="support-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="field-app" class="form-label" data-en="App or Game Name *" data-vi="Tên Ứng Dụng hoặc Trò Chơi *">App or Game Name *</label>
+                  <input
+                    type="text"
+                    id="field-app"
+                    class="form-control"
+                    required
+                    placeholder="e.g., SmartKind, Cho Con, or Game Title"
+                    data-placeholder-en="e.g., SmartKind, Cho Con, or Game Title"
+                    data-placeholder-vi="VD: SmartKind, Cho Con, hoặc tên Game..."
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="field-category" class="form-label" data-en="Request Category *" data-vi="Danh Mục Hỗ Trợ *">Request Category *</label>
+                  <select id="field-category" class="form-control" required>
+                    <option value="General Support" data-en="General Help &amp; Questions" data-vi="Hỗ trợ chung &amp; Giải đáp">General Help &amp; Questions</option>
+                    <option value="Bug / Crash Report" data-en="Bug, Audio, or Crash Report" data-vi="Báo lỗi kỹ thuật / Âm thanh / Văng ứng dụng">Bug, Audio, or Crash Report</option>
+                    <option value="Billing &amp; Restore Purchase" data-en="Billing, Subscription &amp; Restore Purchase" data-vi="Thanh toán, Gói đăng ký &amp; Khôi phục giao dịch">Billing, Subscription &amp; Restore Purchase</option>
+                    <option value="Account / Data Deletion Request" data-en="Privacy, Account &amp; Data Deletion Request" data-vi="Yêu cầu Quyền riêng tư &amp; Xóa dữ liệu / Tài khoản">Privacy, Account &amp; Data Deletion Request</option>
+                    <option value="Feature Request / Feedback" data-en="Feature Request &amp; Feedback" data-vi="Đề xuất tính năng &amp; Góp ý">Feature Request &amp; Feedback</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="field-email" class="form-label" data-en="Your Email Address *" data-vi="Email Liên Hệ Của Bạn *">Your Email Address *</label>
+                  <input
+                    type="email"
+                    id="field-email"
+                    class="form-control"
+                    required
+                    placeholder="you@example.com"
+                    data-placeholder-en="you@example.com"
+                    data-placeholder-vi="tenban@email.com"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="field-device" class="form-label" data-en="Device &amp; iOS Version (Optional)" data-vi="Thiết Bị &amp; Phiên Bản iOS (Tùy chọn)">Device &amp; iOS Version (Optional)</label>
+                  <input
+                    type="text"
+                    id="field-device"
+                    class="form-control"
+                    placeholder="e.g., iPhone 16 Pro, iOS 18.1"
+                    data-placeholder-en="e.g., iPhone 16 Pro, iOS 18.1"
+                    data-placeholder-vi="VD: iPhone 16 Pro, iOS 18.1"
+                  />
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="field-message" class="form-label" data-en="How can we help you? *" data-vi="Nội Dung Chi Tiết *">How can we help you? *</label>
+                  <textarea
+                    id="field-message"
+                    class="form-control"
+                    required
+                    placeholder="Please describe your question, issue, or request in detail..."
+                    data-placeholder-en="Please describe your question, issue, or request in detail..."
+                    data-placeholder-vi="Vui lòng mô tả chi tiết câu hỏi, sự cố hoặc yêu cầu của bạn..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <div style="margin-top: 18px;">
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  <span aria-hidden="true">🚀</span>
+                  <span data-en="Generate Support Ticket &amp; Send Email" data-vi="Tạo Phiếu Hỗ Trợ &amp; Gửi Email">Generate Support Ticket &amp; Send Email</span>
+                </button>
+              </div>
+              <p class="form-note" data-en="Submitting generates a formatted support ticket and opens your default mail app addressed to archonic88@gmail.com." data-vi="Khi nhấn gửi, hệ thống sẽ tạo mã phiếu hỗ trợ và mở ứng dụng Email của bạn gửi tới archonic88@gmail.com.">
+                Submitting generates a formatted support ticket and opens your default mail app addressed to archonic88@gmail.com.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Support Ticket Confirmation Modal -->
+  <div id="ticket-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <span class="modal-badge" data-en="✓ Support Ticket Ready" data-vi="✓ Đã Tạo Phiếu Hỗ Trợ">✓ Support Ticket Ready</span>
+      <h3 id="modal-title" data-en="Your Support Ticket Has Been Prepared" data-vi="Phiếu Hỗ Trợ Của Bạn Đã Sẵn Sàng">Your Support Ticket Has Been Prepared</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 6px;" data-en="Your mail app should open automatically. If it didn't open, click 'Open Mail App' or copy the ticket details below and email archonic88@gmail.com." data-vi="Ứng dụng Email của bạn sẽ tự động mở. Nếu chưa mở, bạn có thể nhấn 'Mở Ứng Dụng Mail' hoặc sao chép nội dung phiếu bên dưới và gửi tới archonic88@gmail.com.">
+        Your mail app should open automatically. If it didn't open, click 'Open Mail App' or copy the ticket details below and email archonic88@gmail.com.
+      </p>
+
+      <pre id="ticket-preview-content" class="ticket-preview"></pre>
+
+      <div class="modal-actions">
+        <button type="button" id="copy-ticket-btn" class="btn btn-secondary" data-en="Copy Ticket Details" data-vi="Sao Chép Nội Dung Phiếu">Copy Ticket Details</button>
+        <a id="mailto-trigger-btn" href="mailto:archonic88@gmail.com" class="btn btn-primary" data-en="Open Mail App" data-vi="Mở Ứng Dụng Mail">Open Mail App</a>
+        <button type="button" id="close-modal-btn" class="btn btn-secondary" data-en="Close" data-vi="Đóng">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="site-toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        &copy; 2026 <strong>Archonic</strong>. <span data-en="All rights reserved. Official iOS App &amp; Game Support Portal." data-vi=" Bảo lưu mọi quyền. Cổng hỗ trợ ứng dụng &amp; trò chơi iOS chính thức.">All rights reserved. Official iOS App &amp; Game Support Portal.</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html" data-en="Support Center" data-vi="Trung Tâm Hỗ Trợ">Support Center</a>
+        <a href="privacy.html" data-en="Privacy Policy" data-vi="Chính Sách Bảo Mật">Privacy Policy</a>
+        <a href="terms.html" data-en="Terms of Use" data-vi="Điều Khoản Sử Dụng">Terms of Use</a>
+        <a href="mailto:archonic88@gmail.com">archonic88@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
