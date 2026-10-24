@@ -20,10 +20,10 @@ A universal, Apple App Store–compliant static website for **Archonic** (`archo
 
 Your support portal is live on **`archonic-landing`** (Vercel) and **GitHub Pages** (`evolvetech8/support`). Copy and paste these URLs directly into **App Store Connect**:
 
-### Primary Vercel URLs (`archonic-landing`)
-- **Support URL**: `https://archonic-landing.vercel.app`
-- **Privacy Policy URL**: `https://archonic-landing.vercel.app/privacy.html` *(or `https://archonic-landing.vercel.app/privacy`)*
-- **Terms of Use (EULA) URL**: `https://archonic-landing.vercel.app/terms.html` *(or `https://archonic-landing.vercel.app/terms`)*
+### Primary Vercel URLs (`archonic-studio`)
+- **Support URL**: `https://archonic-studio.vercel.app`
+- **Privacy Policy URL**: `https://archonic-studio.vercel.app/privacy.html` *(or `https://archonic-studio.vercel.app/privacy`)*
+- **Terms of Use (EULA) URL**: `https://archonic-studio.vercel.app/terms.html` *(or `https://archonic-studio.vercel.app/terms`)*
 
 ### Backup GitHub Pages URLs (`evolvetech8/support`)
 - **Support URL**: `https://evolvetech8.github.io/support/`
@@ -31,7 +31,7 @@ Your support portal is live on **`archonic-landing`** (Vercel) and **GitHub Page
 - **Terms of Use (EULA) URL**: `https://evolvetech8.github.io/support/terms.html`
 
 > **Tip — Deep-linking Language from Your iOS App:**
-> By default, the portal opens in **English** (`?lang=en`) for Apple App Store Reviewers. If your iOS app is set to Vietnamese, you can open `?lang=vi` (e.g., `https://archonic-landing.vercel.app/?lang=vi`) to automatically display Vietnamese.
+> By default, the portal opens in **English** (`?lang=en`) for Apple App Store Reviewers. If your iOS app is set to Vietnamese, you can open `?lang=vi` (e.g., `https://archonic-studio.vercel.app/?lang=vi`) to automatically display Vietnamese.
 
 ---
 
