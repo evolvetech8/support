@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en" data-theme="dark">
+<html lang="en" data-lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,8 @@
     name="description"
     content="Official customer support, troubleshooting, billing help, FAQ, and data privacy requests for all iOS and iPadOS apps and games published by Archonic."
   />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,7 +17,9 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-link" aria-label="Archonic Support Home">
-        <span class="brand-mark">A</span>
+        <span class="brand-mark">
+          <img src="logo.png" alt="Archonic Logo" class="brand-logo-img" />
+        </span>
         <span class="brand-text-wrap">
           <span>Archonic</span>
           <span class="brand-subtitle" data-en="iOS App &amp; Game Studio" data-vi="Studio Ứng Dụng &amp; Game iOS">iOS App &amp; Game Studio</span>
@@ -44,6 +48,10 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
+        <div class="hero-logo-showcase">
+          <img src="logo.png" alt="Archonic Official Logo" />
+        </div>
+
         <div class="status-pill">
           <span class="status-dot" aria-hidden="true"></span>
           <span data-en="All App &amp; Game Services Operational" data-vi="Tất cả Dịch vụ Ứng dụng &amp; Trò chơi Hoạt động Ổn định">All App &amp; Game Services Operational</span>
@@ -699,8 +707,11 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-copy">
-        &copy; 2026 <strong>Archonic</strong>. <span data-en="All rights reserved. Official iOS App &amp; Game Support Portal." data-vi=" Bảo lưu mọi quyền. Cổng hỗ trợ ứng dụng &amp; trò chơi iOS chính thức.">All rights reserved. Official iOS App &amp; Game Support Portal.</span>
+      <div class="footer-brand">
+        <img src="logo.png" alt="Archonic" class="footer-logo" />
+        <div class="footer-copy">
+          &copy; 2026 <strong>Archonic</strong>. <span data-en="All rights reserved. Official iOS App &amp; Game Support Portal." data-vi=" Bảo lưu mọi quyền. Cổng hỗ trợ ứng dụng &amp; trò chơi iOS chính thức.">All rights reserved. Official iOS App &amp; Game Support Portal.</span>
+        </div>
       </div>
       <div class="footer-links">
         <a href="index.html" data-en="Support Center" data-vi="Trung Tâm Hỗ Trợ">Support Center</a>

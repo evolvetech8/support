@@ -6,7 +6,7 @@
   const STORAGE_THEME_KEY = "archonic_theme";
 
   let currentLang = "en";
-  let currentTheme = "dark";
+  let currentTheme = "light";
   let currentFaqCategory = "all";
   let latestTicketText = "";
 
@@ -28,7 +28,7 @@
     if (saved === "light" || saved === "dark") {
       return saved;
     }
-    return "dark";
+    return "light";
   }
 
   function applyLanguage(lang) {
