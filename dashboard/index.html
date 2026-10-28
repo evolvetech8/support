@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archonic Studio — App Store Analytics Dashboard</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="dashboard/dashboard.css" />
+</head>
+<body>
+  <!-- Header Bar -->
+  <header class="dash-header">
+    <div class="container dash-header-inner">
+      <div class="brand-section">
+        <div class="brand-logo">
+          <img src="logo.png" alt="Archonic" />
+        </div>
+        <div>
+          <div class="brand-title">Archonic Studio</div>
+          <div class="brand-subtitle">App Store Analytics</div>
+        </div>
+        <span id="status-pill" class="status-pill demo">
+          <span class="status-dot"></span> Loading...
+        </span>
+      </div>
+
+      <div class="header-controls">
+        <!-- Date Range Filter -->
+        <div class="btn-filter-group" role="group" aria-label="Date Range">
+          <button type="button" class="btn-filter" data-range="7d">7D</button>
+          <button type="button" class="btn-filter active" data-range="30d">30D</button>
+          <button type="button" class="btn-filter" data-range="90d">90D</button>
+          <button type="button" class="btn-filter" data-range="12m">12M</button>
+        </div>
+
+        <!-- App Picker -->
+        <select id="app-select" class="select-control" aria-label="Filter by App">
+          <option value="all">All Apps</option>
+        </select>
+
+        <!-- Actions -->
+        <button type="button" id="btn-sync" class="btn btn-primary" title="Trigger App Store Connect Report Sync">
+          ⚡ Sync Now
+        </button>
+        <button type="button" id="btn-logout" class="btn btn-secondary" title="Sign out of analytics dashboard">
+          Logout
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Notice Banner (shown if credentials are not yet configured) -->
+    <div id="setup-notice" class="notice-card" style="display: none;">
+      <div class="notice-text">
+        <strong>Demo Mode Active:</strong> Showing simulated metrics for your apps. Connect <span id="notice-missing">your database and App Store API key</span> in Vercel to sync live daily data from Apple.
+      </div>
+      <a href="https://vercel.com/evolvetech8s-projects/archonic-landing/settings/environment-variables" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.78rem;">
+        Configure in Vercel ↗
+      </a>
+    </div>
+
+    <!-- 6 KPI Metric Cards Grid -->
+    <section class="kpi-grid">
+      <!-- 1. Impressions -->
+      <article class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Impressions</span>
+          <span class="kpi-icon" aria-hidden="true">👁️</span>
+        </div>
+        <div id="kpi-impressions" class="kpi-value">—</div>
+        <div class="kpi-subtext">
+          <span id="delta-impressions" class="delta-badge">—</span>
+          <span class="delta-label">vs prev period</span>
+        </div>
+      </article>
+
+      <!-- 2. Product Page Views -->
+      <article class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Page Views</span>
+          <span class="kpi-icon" aria-hidden="true">📄</span>
+        </div>
+        <div id="kpi-pageviews" class="kpi-value">—</div>
+        <div class="kpi-subtext">
+          <span id="delta-pageviews" class="delta-badge">—</span>
+          <span class="delta-label">vs prev period</span>
+        </div>
+      </article>
+
+      <!-- 3. Total Downloads -->
+      <article class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Total Downloads</span>
+          <span class="kpi-icon" aria-hidden="true">📥</span>
+        </div>
+        <div id="kpi-downloads" class="kpi-value">—</div>
+        <div class="kpi-subtext">
+          <span id="delta-downloads" class="delta-badge">—</span>
+          <span class="delta-label">first-time + redownload</span>
+        </div>
+      </article>
+
+      <!-- 4. Conversion Rate -->
+      <article class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Conversion Rate</span>
+          <span class="kpi-icon" aria-hidden="true">🎯</span>
+        </div>
+        <div id="kpi-conversion" class="kpi-value">—</div>
+        <div class="kpi-subtext">
+          <span id="delta-conversion" class="delta-badge">—</span>
+          <span class="delta-label">downloads ÷ unique</span>
+        </div>
+      </article>
+
+      <!-- 5. Proceeds -->
+      <article class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Proceeds (USD)</span>
+          <span class="kpi-icon" aria-hidden="true">💰</span>
+        </div>
+        <div id="kpi-proceeds" class="kpi-value">—</div>
+        <div class="kpi-subtext">
+          <span id="delta-proceeds" class="delta-badge">—</span>
+          <span class="delta-label">after Apple share</span>
+        </div>
+      </article>
+
+      <!-- 6. Sessions -->
+      <article class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Sessions</span>
+          <span class="kpi-icon" aria-hidden="true">⏱️</span>
+        </div>
+        <div id="kpi-sessions" class="kpi-value">—</div>
+        <div id="kpi-sessions-sub" class="kpi-subtext" style="color: var(--text-muted);">
+          Opt-in users only
+        </div>
+      </article>
+    </section>
+
+    <!-- Proceeds by App Over Time Chart -->
+    <section class="chart-card">
+      <div class="chart-header">
+        <div>
+          <h2 class="chart-title">Proceeds by App Over Time</h2>
+          <p class="chart-subtitle">Daily net revenue breakdown in USD across your mobile apps</p>
+        </div>
+        <div class="chart-controls">
+          <div class="btn-filter-group" role="group" aria-label="Chart Type">
+            <button type="button" class="btn-filter" data-chart="line">Line</button>
+            <button type="button" class="btn-filter active" data-chart="area">Area</button>
+            <button type="button" class="btn-filter" data-chart="bar">Bar</button>
+          </div>
+        </div>
+      </div>
+      <div class="chart-canvas-wrap">
+        <canvas id="proceeds-chart"></canvas>
+      </div>
+    </section>
+
+    <!-- Proceeds by App Breakdown -->
+    <section class="breakdown-card">
+      <div class="breakdown-header">
+        <h2 class="breakdown-title">Proceeds by App Breakdown</h2>
+        <p class="breakdown-subtitle">Portfolio share and conversion distribution</p>
+      </div>
+      <div id="breakdown-list" class="breakdown-list">
+        <!-- Rendered dynamically via dashboard.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Login Modal Overlay (shown when unauthenticated) -->
+  <div id="login-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="login-title">
+    <div class="login-card">
+      <div class="login-icon">
+        <img src="logo.png" alt="Archonic" />
+      </div>
+      <h2 id="login-title" class="login-title">Archonic Studio</h2>
+      <p class="login-desc">Enter your dashboard password to view private analytics &amp; revenue</p>
+      <form id="login-form" class="login-form">
+        <input
+          type="password"
+          id="login-password"
+          class="input-password"
+          placeholder="Enter password..."
+          required
+          autofocus
+        />
+        <div id="login-error" class="login-error"></div>
+        <button type="submit" id="login-btn" class="btn btn-primary" style="justify-content: center; padding: 12px;">
+          Sign In to Dashboard
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="dashboard/vendor/chart.umd.min.js"></script>
+  <script src="dashboard/dashboard.js"></script>
+</body>
+</html>

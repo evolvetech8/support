@@ -16,6 +16,31 @@ A universal, Apple App Store–compliant static website for **Archonic** (`archo
 
 ---
 
+## 📊 Private App Store Analytics Dashboard
+
+Archonic Studio includes a private, password-protected analytics dashboard accessible at:
+- **`https://archonic-landing.vercel.app/dashboard`** (or `https://archonic-studio.vercel.app/dashboard`)
+- Protected by `X-Robots-Tag: noindex, nofollow` and HttpOnly session cookies.
+- Tracks: **Impressions**, **Product Page Views**, **Total Downloads**, **Conversion Rate**, **Proceeds (USD)**, and **Sessions** (opt-in users).
+- Interactive Chart.js graph with **Line / Area / Bar** views and **Proceeds by App Breakdown** progress bars.
+- Scheduled daily sync with Apple via Vercel Cron (`0 6 * * *`) + manual "Sync Now" button.
+
+### 🔐 Connecting Real Data in Vercel
+
+In your Vercel Project (**archonic-landing** → Settings → Environment Variables):
+
+1. **`DASHBOARD_PASSWORD`**: Set your private password to lock the `/dashboard` route.
+2. **`DATABASE_URL`**: Connect Neon in Vercel (Storage → Connect Neon).
+3. **`ASC_ISSUER_ID`**: App Store Connect → Users and Access → Integrations → Issuer ID.
+4. **`ASC_KEY_ID`**: Key ID of your App Store Connect Team Key.
+5. **`ASC_VENDOR_NUMBER`**: Found at the top of Payments and Financial Reports in App Store Connect.
+6. **`ASC_PRIVATE_KEY`**: Contents of your downloaded `.p8` private key file.
+7. **`CRON_SECRET`**: Random secret token to secure automated daily syncs.
+
+*When credentials are not yet configured, the dashboard operates in **Demo Mode**, displaying realistic simulated data across your apps.*
+
+---
+
 ## 🔗 Live Production URLs for App Store Connect
 
 Your support portal is live on **`archonic-landing`** (Vercel) and **GitHub Pages** (`evolvetech8/support`). Copy and paste these URLs directly into **App Store Connect**:

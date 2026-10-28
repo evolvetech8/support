@@ -4,9 +4,27 @@
   "installCommand": "",
   "outputDirectory": ".",
   "cleanUrls": false,
+  "headers": [
+    {
+      "source": "/(dashboard.*|api/.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
   "rewrites": [
+    { "source": "/dashboard", "destination": "/dashboard.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/terms", "destination": "/terms.html" },
     { "source": "/support", "destination": "/index.html" }
+  ],
+  "crons": [
+    {
+      "path": "/api/sync",
+      "schedule": "0 6 * * *"
+    }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "name": "archonic-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Archonic support portal + private App Store analytics dashboard",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "dev": "node scripts/dev-server.js",
+    "vendor:chart": "cp node_modules/chart.js/dist/chart.umd.min.js dashboard/vendor/chart.umd.min.js"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0"
+  },
+  "devDependencies": {
+    "chart.js": "^4.6.1"
+  }
+}
