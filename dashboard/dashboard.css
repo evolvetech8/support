@@ -542,6 +542,46 @@ body {
   min-height: 18px;
 }
 
+/* Toast Notification */
+.dash-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 200;
+  max-width: 380px;
+}
+
+.dash-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.dash-toast.success {
+  border-color: var(--success);
+  color: #fff;
+  background: rgba(16, 185, 129, 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.dash-toast.error {
+  border-color: var(--danger);
+  color: #fff;
+  background: rgba(239, 68, 68, 0.25);
+  backdrop-filter: blur(12px);
+}
+
 @media (max-width: 768px) {
   .dash-header-inner {
     flex-direction: column;

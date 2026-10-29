@@ -94,6 +94,18 @@
     window.location.reload();
   }
 
+  let toastTimer = null;
+  function showToast(message, type = 'info') {
+    const toast = document.getElementById('dash-toast');
+    if (!toast) return;
+    toast.textContent = message;
+    toast.className = `dash-toast show ${type}`;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 4000);
+  }
+
   async function handleSync() {
     const btn = document.getElementById('btn-sync');
     if (btn) {
@@ -105,13 +117,13 @@
       const res = await fetch('/api/sync', { method: 'POST' });
       const data = await res.json();
       if (data.ok) {
-        alert('Sync completed successfully!');
+        showToast('✓ Sync completed successfully! Real data updated.', 'success');
         loadMetrics();
       } else {
-        alert(data.message || data.instructions || 'Sync completed with notices.');
+        showToast(data.message || data.instructions || 'Sync notice: credentials required.', 'error');
       }
     } catch (err) {
-      alert('Sync request failed: ' + err.message);
+      showToast('Sync request error: ' + err.message, 'error');
     } finally {
       if (btn) {
         btn.disabled = false;
